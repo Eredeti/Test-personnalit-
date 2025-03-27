@@ -3,7 +3,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
     let countA = 0;
     let countB = 0;
     let countC = 0;
-    let countpb = 0;
 
     let isValid = true; // Variable pour vérifier si toutes les questions sont répondues
 
@@ -41,16 +40,24 @@ function donnePersonnalite(A, B, C) {
     let personnalites = [];
 
     if (A === max) {
-        personnalites.push("A");
+        document.getElementById("resultat").textContent = `Wow ! Tu es un(e) champion(ne) du sommeil ! 
+        Tu as compris que ton cerveau a besoin de repos loin des écrans. Continue comme ça ! Tes matins
+        doivent être bien plus agréables que ceux qui restent scotchés à leur téléphone toute la nuit.`
     }
     if (B === max) {
-        personnalites.push("B");
+        document.getElementById("resultat").textContent = `Hmm... on sent que tu hésites… Tu sais que les 
+        écrans avant de dormir c'est pas top, mais tu n'es pas encore prêt(e) à lâcher ton téléphone. 
+        Pourquoi ne pas essayer un petit défi : 1h sans écran avant de dormir pendant 1 semaine? 
+        Qui sait, tu pourrais redécouvrir le plaisir de bien dormir ! `
     }
     if (C === max) {
-        personnalites.push("C");
+        document.getElementById("resultat").textContent = `Aïe aïe aïe… On a un(e) accro aux écrans ici ! 
+        Ton cerveau crie au secours et ta mélatonine est en PLS. Si tu galères à t'endormir ou que tu es 
+        toujours fatigué(e), il est peut être temps de poser ton téléphone. Tente une détox des écrans avant
+        de dormir, tu verras la différence !`
     }
 
-    document.getElementById("resultat").textContent = "Tu es de la personnalité : " + personnalites.join(" et ");
+
 }
 
 function afficherGraphique(A, B, C) {
