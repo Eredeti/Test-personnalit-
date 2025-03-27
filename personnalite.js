@@ -85,6 +85,14 @@ function donnePersonnalite(A, B, C) {
 function afficherGraphique(A, B, C) {
     let ctx = document.getElementById('graphique').getContext('2d');
 
+    // Calculer la largeur et la hauteur de l'écran (ajuste la taille du graphique)
+    let largeur = Math.min(window.innerWidth, 500);  // Largeur max 500px
+    let hauteur = Math.min(window.innerHeight, 500); // Hauteur max 500px
+
+    // Appliquer la taille au canvas
+    document.getElementById('graphique').width = largeur;
+    document.getElementById('graphique').height = hauteur;
+
     if (window.myChart instanceof Chart) {
         window.myChart.destroy();
     }
@@ -99,7 +107,7 @@ function afficherGraphique(A, B, C) {
             }]
         },
         options: {
-            responsive: false,
+            responsive: true,
             plugins: {
                 legend: { position: 'top' }
             }
