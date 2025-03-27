@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let selected = document.querySelector(`input[name="q${i}"]:checked`);
             if (!selected) {
                 isValid = false;
-                alert(`Tu n'as pas répondu à la question !`);
+                alert(`Tu dois répondre à cette question avant de continuer`);
                 return;
             }
             if (selected.value === "A") countA++;
