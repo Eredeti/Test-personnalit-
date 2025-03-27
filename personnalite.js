@@ -54,15 +54,15 @@ document.addEventListener("DOMContentLoaded", function() {
 function donnePersonnalite(A, B, C) {
     let max = Math.max(A, B, C);
     let texte = "";
-    if(A===B) texte = `Tu es sur la bonne voie pour un sommeil de qualité, 
+    if(A===B===max) texte = `Tu es sur la bonne voie pour un sommeil de qualité, 
     mais il y a encore quelques habitudes à ajuster ! Tu fais des efforts 
     pour limiter les écrans, mais parfois, la tentation est trop forte… 
     Essaie d’adopter une routine relaxante avant de dormir pour améliorer encore plus ton repos !`;
-    else if(A===C) texte = `Un vrai paradoxe du sommeil ! D’un côté, tu connais 
+    else if(A===C===max) texte = `Un vrai paradoxe du sommeil ! D’un côté, tu connais 
     l’importance du repos, mais de l’autre, les écrans te tiennent en otage… 
     Un petit compromis ? Essaie d’alterner : une nuit écran-free, une nuit comme d’habitude. 
     Tu verras vite ce qui te fait le plus de bien !`;
-    else if(B===C) texte = `On sent que tu aimes tes écrans… peut-être un peu trop ! 
+    else if(B===C===max) texte = `On sent que tu aimes tes écrans… peut-être un peu trop ! 
     Tu es conscient(e) que ce n'est pas idéal, mais tu as du mal à décrocher. 
     Pourquoi ne pas essayer un mini-défi ? Une demi-heure sans écran avant de 
     dormir pendant 3 jours… Juste pour voir ?`;
